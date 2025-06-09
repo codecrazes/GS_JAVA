@@ -1,5 +1,9 @@
 package br.com.fiap.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -25,4 +29,70 @@ public class PontoApoio {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getTipoAbrigo() {
+		return tipoAbrigo;
+	}
+
+	public void setTipoAbrigo(String tipoAbrigo) {
+		this.tipoAbrigo = tipoAbrigo;
+	}
+
+	public int getCapacidade() {
+		return capacidade;
+	}
+
+	public void setCapacidade(int capacidade) {
+		this.capacidade = capacidade;
+	}
+
+	public String getResponsavelNome() {
+		return responsavelNome;
+	}
+
+	public void setResponsavelNome(String responsavelNome) {
+		this.responsavelNome = responsavelNome;
+	}
+
+	public String getResponsavelTelefone() {
+		return responsavelTelefone;
+	}
+
+	public void setResponsavelTelefone(String responsavelTelefone) {
+		this.responsavelTelefone = responsavelTelefone;
+	}
+
+	public String getHorarioFuncionamento() {
+		return horarioFuncionamento;
+	}
+
+	public void setHorarioFuncionamento(String horarioFuncionamento) {
+		this.horarioFuncionamento = horarioFuncionamento;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+    
+    
 }

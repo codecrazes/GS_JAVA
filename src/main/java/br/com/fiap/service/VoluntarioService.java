@@ -28,4 +28,10 @@ public class VoluntarioService {
     public void deletar(Long id) {
         repository.deleteById(id);
     }
+    
+    public Voluntario atualizar(Long id, Voluntario voluntario) {
+        voluntario.setId(id);
+        return repository.save(voluntario);
+    }
 }
+

@@ -28,4 +28,9 @@ public class PontoApoioService {
     public void deletar(Long id) {
         repository.deleteById(id);
     }
+
+    public PontoApoio atualizar(Long id, PontoApoio ponto) {
+        ponto.setId(id);
+        return repository.save(ponto);
+    }
 }

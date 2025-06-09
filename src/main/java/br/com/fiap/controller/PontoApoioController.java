@@ -33,4 +33,9 @@ public class PontoApoioController {
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
     }
+
+    @PutMapping("/{id}")
+    public PontoApoio atualizar(@PathVariable Long id, @RequestBody PontoApoio ponto) {
+        return service.atualizar(id, ponto);
+    }
 }

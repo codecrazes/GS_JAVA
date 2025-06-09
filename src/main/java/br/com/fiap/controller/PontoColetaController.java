@@ -33,4 +33,9 @@ public class PontoColetaController {
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
     }
+
+    @PutMapping("/{id}")
+    public PontoColeta atualizar(@PathVariable Long id, @RequestBody PontoColeta ponto) {
+        return service.atualizar(id, ponto);
+    }
 }

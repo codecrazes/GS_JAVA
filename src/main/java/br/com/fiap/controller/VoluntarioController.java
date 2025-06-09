@@ -33,4 +33,9 @@ public class VoluntarioController {
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
     }
+    
+    @PutMapping("/{id}")
+    public Voluntario atualizar(@PathVariable Long id, @RequestBody Voluntario voluntario) {
+        return service.atualizar(id, voluntario);
+    }
 }

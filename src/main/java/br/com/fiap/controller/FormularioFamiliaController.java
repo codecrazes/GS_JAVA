@@ -29,6 +29,11 @@ public class FormularioFamiliaController {
         return service.salvar(familia);
     }
 
+    @PutMapping("/{id}")
+    public FormularioFamilia atualizar(@PathVariable Long id, @RequestBody FormularioFamilia familiaAtualizada) {
+        return service.atualizar(id, familiaAtualizada);
+    }
+
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id) {
         service.deletar(id);

@@ -28,4 +28,9 @@ public class PontoColetaService {
     public void deletar(Long id) {
         repository.deleteById(id);
     }
+
+    public PontoColeta atualizar(Long id, PontoColeta ponto) {
+        ponto.setId(id);
+        return repository.save(ponto);
+    }
 }

@@ -33,4 +33,9 @@ public class RelatorioAjudaController {
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
     }
+
+    @PutMapping("/{id}")
+    public RelatorioAjuda atualizar(@PathVariable Long id, @RequestBody RelatorioAjuda relatorio) {
+        return service.atualizar(id, relatorio);
+    }
 }

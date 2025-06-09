@@ -28,4 +28,9 @@ public class FormularioFamiliaService {
     public void deletar(Long id) {
         repository.deleteById(id);
     }
+
+    public FormularioFamilia atualizar(Long id, FormularioFamilia familia) {
+        familia.setId(id);
+        return repository.save(familia);
+    }
 }

@@ -28,4 +28,9 @@ public class RelatorioAjudaService {
     public void deletar(Long id) {
         repository.deleteById(id);
     }
+
+    public RelatorioAjuda atualizar(Long id, RelatorioAjuda relatorio) {
+        relatorio.setId(id);
+        return repository.save(relatorio);
+    }
 }
